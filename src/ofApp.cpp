@@ -231,6 +231,7 @@ void ofApp::drawPage(int pageNum){
 
 //--------------------------------------------------------------
 void ofApp::startPrinting(){
+	cout << "start to print" << endl;
     if (cards.size() == 0){
         makeFeedback("Nothing to print", true);
         return;
@@ -281,7 +282,7 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-    for (int i=0; i<2; i++){
+	for (int i=0; i<2; i++){
         pageButtons[i].mouseMoved(x, y);
     }
     printButton.mouseMoved(x, y);
@@ -299,6 +300,9 @@ void ofApp::mousePressed(int x, int y, int button){
     if (printing){
         return;
     }
+
+	//dumb fix for Windows which sometimes stops firing mouseMoved after a pdf has been printed
+	mouseMoved(x, y);
     
     borderPadSlider.mousePressed(x, y, button);
     cardPadSlider.mousePressed(x, y, button);
@@ -478,6 +482,10 @@ void ofApp::changePage(int dir){
     
     int maxPages = (cards.size()-1)/9;
     if (demoPageNum > maxPages)    demoPageNum = maxPages;
+
+	if (cards.size() == 0) {
+		demoPageNum = 0;
+	}
 }
 
 //--------------------------------------------------------------

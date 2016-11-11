@@ -37,7 +37,7 @@ void Button::draw(){
 }
 
 void Button::mouseMoved(int x, int y ){
-    mouseInside = box.inside(x, y);
+	mouseInside = box.inside(x, y);
 }
 bool Button::mousePressed(int x, int y, int button){
     return mouseInside;

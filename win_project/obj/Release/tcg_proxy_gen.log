@@ -1,2 +1,7 @@
-﻿  main.cpp
-src\main.cpp(2): fatal error C1083: Cannot open include file: 'ofApp.h': No such file or directory
+﻿  Button.cpp
+  ofApp.cpp
+     Creating library bin\tcg_proxy_gen.lib and object bin\tcg_proxy_gen.exp
+  LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+  tcg_proxy_gen.vcxproj -> C:\Users\awallace\Documents\of_v0.9.3_vs_release\apps\tcg_proxy_gen\win_project\bin\tcg_proxy_gen.exe
+  
+  	                   9	C:\Users\awallace\Documents\of_v0.9.3_vs_release\export\vs\Win32\
