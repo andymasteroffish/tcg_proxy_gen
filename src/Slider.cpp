@@ -43,7 +43,7 @@ void Slider::mouseReleased(){
     beingDragged = false;
 }
 
-float Slider::setVal(float val){
+void Slider::setVal(float val){
     handleX = ofMap(val, minVal, maxVal, pos.x, pos.x+width);
 }
 

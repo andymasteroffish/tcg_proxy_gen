@@ -21,7 +21,7 @@ public:
     void mouseDragged(int x, int y, int button);
     void mouseReleased();
     
-    float setVal(float val);
+    void setVal(float val);
     float getVal();
     
     ofVec2f pos;

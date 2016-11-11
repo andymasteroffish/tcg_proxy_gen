@@ -1,0 +1,14 @@
+﻿  Button.cpp
+  CheckBox.cpp
+  FeedbackText.cpp
+  ofApp.cpp
+  Slider.cpp
+  main.cpp
+  ofxXmlSettings.cpp
+  tinyxml.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+     Creating library bin\tcg_proxy_gen_debug.lib and object bin\tcg_proxy_gen_debug.exp
+  tcg_proxy_gen.vcxproj -> C:\Users\awallace\Documents\of_v0.9.3_vs_release\apps\tcg_proxy_gen\win_project\bin\tcg_proxy_gen_debug.exe
+  
+  	                   9	C:\Users\awallace\Documents\of_v0.9.3_vs_release\export\vs\Win32\
