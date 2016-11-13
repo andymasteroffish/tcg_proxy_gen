@@ -54,7 +54,7 @@
 		2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
 		50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
 		5775118B1DD7C97A001C3D61 /* tcg_proxy_gen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = tcg_proxy_gen.icns; sourceTree = "<group>"; };
-		57EA7C111DD6337100ACFC90 /* proxy_genDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proxy_genDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57EA7C111DD6337100ACFC90 /* proxy_genDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = proxy_genDebug.app; path = tcg_proxy_genDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EA7C131DD6344800ACFC90 /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../../src/Button.cpp; sourceTree = "<group>"; };
 		57EA7C141DD6344800ACFC90 /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Button.hpp; path = ../../src/Button.hpp; sourceTree = "<group>"; };
 		57EA7C151DD6344800ACFC90 /* CheckBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CheckBox.cpp; path = ../../src/CheckBox.cpp; sourceTree = "<group>"; };
