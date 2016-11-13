@@ -53,3 +53,9 @@ srlp.org
 
 Planned Parenthood
 www.plannedparenthood.org
+
+—————
+
+This tool was written in openFrameworks 0.9.3
+The source code for this project can be viewed here:
+https://github.com/andymasteroffish/tcg_proxy_gen
