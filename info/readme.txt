@@ -4,17 +4,17 @@ andy@andymakes.com
 
 —————
 
-This tool lets you drag in images or folders of images and export multi-page, ready to print PDFs that can be cut up and slipped into card sleeves.
+This tool lets you drag in images or folders of images and export multi-page, ready-to-print PDFs that can be cut up and slipped into card sleeves.
 
-This is a more user friendly version of my Booster Pack Generator which I used to test my own games. That tool is available here: andymakes.itch.io/booster-pack-generator
+This is a more user-friendly version of my Booster Pack Generator which I used to test my own games. That tool is available here: andymakes.itch.io/booster-pack-generator
 
 —————
 
 Issues opening the application:
 
-On windows, if you get “Windows protected your PC” when opening the application, click “more info” and then “Run Anyway.”
+On Windows, if you get “Windows protected your PC” when opening the application, click “more info” and then “Run Anyway.”
 
-On Mac, if you get a message saying it can’t be opened because it is from an unidentified developer, click OK. Right click (or command click) the app and select Open. This time when the unidentified developer window pops up, click open.
+On Mac, if you get a message saying it can’t be opened because it is from an unidentified developer, click OK. Right click (or command-click) the app and select Open. This time when the unidentified developer window pops up, click open.
 
 —————
 
@@ -55,6 +55,9 @@ srlp.org
 
 Planned Parenthood
 www.plannedparenthood.org
+
+Black Lives Matter
+blacklivesmatter.com
 
 —————
 
