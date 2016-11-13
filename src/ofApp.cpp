@@ -1,6 +1,6 @@
 #include "ofApp.h"
 
-string versionText = "version 0.1";
+string versionText = "version 1.0";
 
 //--------------------------------------------------------------
 void ofApp::setup(){
