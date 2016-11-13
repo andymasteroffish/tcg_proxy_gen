@@ -4,7 +4,9 @@ andy@andymakes.com
 
 —————
 
-I had a way less user friendly version of this program that I used to test my own card games and to print proxies for MTG cards that were too valuable to actually play with. It seemed useful so I decided to rework it into something other people could easily use. Hopefully it is helpful to you
+This tool lets you drag in images or folders of images and export multi-page, ready to print PDFs that can be cut up and slipped into card sleeves.
+
+This is a more user friendly version of my Booster Pack Generator which I used to test my own games. That tool is available here: andymakes.itch.io/booster-pack-generator
 
 —————
 
@@ -34,13 +36,13 @@ I find this is a good site for high-res MTG images: http://magiccards.info/
 
 —————
 
-Because images can be different sizes, the spacing turned into less of an exact science. I set the defaults to be what worked for me, but you may want to print a single page first to make sure the cards are the right size for you.
+Because images can be different sizes, the spacing turned into less of an exact science. I set the defaults to what worked for me, but you may want to print a single page first to make sure the cards are the right size for you.
 
 —————
 
-This tool is free. You can share it, although I’d like it if you kept this read with it.
+This tool is free. You can share it, although I’d like it if you kept this readme with it.
 
-If this tool is useful to you, please donate to one of these amazing organizations:
+If this tool is useful to you (or if it isn’t), please donate to one of these amazing organizations:
 
 Lambda Legal
 www.lambdalegal.org
