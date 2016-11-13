@@ -46,6 +46,8 @@ public:
     void saveSettings();
     void loadSettings();
     
+	float prevFrameTime;
+
     int cardW, cardH;
     
     //what's being printed

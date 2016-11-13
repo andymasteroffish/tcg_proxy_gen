@@ -18,11 +18,11 @@ void FeedbackText::setup(string _text, bool isError){
         col.set(0,0,0);
     }
     
-    timer = 1000;
+    timer = 10;
 }
 
-void FeedbackText::update(){
-    timer--;
+void FeedbackText::update(float deltaTime){
+    timer -= deltaTime;
 }
 
 void FeedbackText::draw(int x, int y){

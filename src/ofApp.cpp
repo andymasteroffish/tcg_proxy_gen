@@ -47,10 +47,15 @@ void ofApp::setup(){
     makeFeedback("for best results, use images of the same size", false);
     
     loadSettings();
+
+	prevFrameTime = ofGetElapsedTimef();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+
+	float deltaTime = ofGetElapsedTimef() - prevFrameTime;
+	prevFrameTime = ofGetElapsedTimef();
     
     //get the values form sliders
     borderPaddingPrc = borderPadSlider.getVal();
@@ -85,7 +90,7 @@ void ofApp::update(){
     }
     
     for (int i=feedback.size()-1; i>=0; i--){
-        feedback[i].update();
+        feedback[i].update(deltaTime);
         if (feedback[i].timer < 0){
             feedback.erase( feedback.begin()+i );
         }

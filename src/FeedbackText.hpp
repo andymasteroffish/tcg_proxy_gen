@@ -15,7 +15,7 @@ class FeedbackText{
 public:
     
     void setup(string _text, bool isError);
-    void update();
+    void update(float deltaTime);
     void draw(int x, int y);
     
     string text;
