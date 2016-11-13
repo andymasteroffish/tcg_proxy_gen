@@ -510,7 +510,7 @@ void ofApp::saveSettings(){
 #ifdef TARGET_OSX
     string filePath = ofFilePath::getCurrentExeDir() + "../Resources/proxy_gen_settings.xml";
 #else
-    string filePath = "proxy_gen_settings.xml";
+    string filePath = "../proxy_gen_settings.xml";
 #endif
     
     ofxXmlSettings xml;
@@ -530,7 +530,7 @@ void ofApp::loadSettings(){
 #ifdef TARGET_OSX
     string filePath = ofFilePath::getCurrentExeDir() + "../Resources/proxy_gen_settings.xml";
 #else
-    string filePath = "proxy_gen_settings.xml";
+    string filePath = "../proxy_gen_settings.xml";
 #endif
     
     ofxXmlSettings xml;
