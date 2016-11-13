@@ -506,6 +506,13 @@ void ofApp::makeFeedback(string text, bool isError){
 
 //--------------------------------------------------------------
 void ofApp::saveSettings(){
+    
+#ifdef TARGET_OSX
+    string filePath = ofFilePath::getCurrentExeDir() + "../Resources/proxy_gen_settings.xml";
+#else
+    string filePath = "proxy_gen_settings.xml";
+#endif
+    
     ofxXmlSettings xml;
     xml.clear();
     
@@ -514,17 +521,22 @@ void ofApp::saveSettings(){
     xml.setValue("fill_spacing", fillSpacingBox.isChecked ? 1 : 0);
     xml.setValue("use_greyscale", greyscaleCheckBox.isChecked ? 1 : 0);
     
-    xml.save("proxy_gen_settings.xml");
-    
-    
+    xml.save(filePath);
 }
 
 //--------------------------------------------------------------
 void ofApp::loadSettings(){
+    
+#ifdef TARGET_OSX
+    string filePath = ofFilePath::getCurrentExeDir() + "../Resources/proxy_gen_settings.xml";
+#else
+    string filePath = "proxy_gen_settings.xml";
+#endif
+    
     ofxXmlSettings xml;
     xml.clear();
     
-    if (xml.loadFile("proxy_gen_settings.xml")){
+    if (xml.loadFile(filePath)){
         borderPadSlider.setVal( xml.getValue("border_padding", 0.071));
         cardPadSlider.setVal( xml.getValue("card_padding", 0.0));
         fillSpacingBox.setValue( xml.getValue("fill_spacing", 0) == 1);
