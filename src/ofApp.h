@@ -43,8 +43,11 @@ public:
     
     void makeFeedback(string text, bool isError);
     
+    string getPrcString(float prc);
+    
     void saveSettings();
     void loadSettings();
+    void restoreDefaults();
     
 	float prevFrameTime;
 
@@ -82,7 +85,7 @@ public:
     bool useGreyscale;
     
     Slider borderPadSlider, cardPadSlider;
-    CheckBox fillSpacingBox, greyscaleCheckBox;
+    CheckBox fillSpacingBox, greyscaleCheckBox, restoreDefaultsBox;
     
     Button pageButtons[2];
     Button clearButton, printButton;

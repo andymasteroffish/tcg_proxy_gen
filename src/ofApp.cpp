@@ -18,19 +18,20 @@ void ofApp::setup(){
     //sliders
     float sliderX = 340;
     float sliderW = 240;
-    borderPadSlider.setup(sliderX, previewY+30, sliderW, 0, 1, 0.071);
-    cardPadSlider.setup(sliderX, borderPadSlider.pos.y+50, sliderW, 0, 1, 0);
+    borderPadSlider.setup(sliderX, previewY+30, sliderW, 0, 0.5, 0.0);
+    cardPadSlider.setup(sliderX, borderPadSlider.pos.y+50, sliderW, 0, 0.5, 0);
     
     //checkbox
     fillSpacingBox.setup("Fill space between cards", sliderX, cardPadSlider.pos.y+25);
     greyscaleCheckBox.setup("Black & white only", sliderX, cardPadSlider.pos.y+60);
+    restoreDefaultsBox.setup("Restore defaults", sliderX, cardPadSlider.pos.y+95);
     
     //buttons
     float buttonW = 80;
     float buttonH = 40;
     
     //other buttons
-    printButton.setup("PRINT", sliderX, cardPadSlider.pos.y+95, sliderW, buttonH);
+    printButton.setup("PRINT", sliderX, cardPadSlider.pos.y+95+35, sliderW, buttonH);
     clearButton.setup("CLEAR ALL", sliderX, printButton.box.y+150, sliderW, buttonH);
     
     //paging
@@ -62,6 +63,11 @@ void ofApp::update(){
     cardPaddingPrc = cardPadSlider.getVal();
     fillCardSpacing = fillSpacingBox.isChecked;
     useGreyscale = greyscaleCheckBox.isChecked;
+    
+    if (restoreDefaultsBox.isChecked){
+        restoreDefaultsBox.setValue(false);
+        restoreDefaults();
+    }
     
     //in case the cardW changed, update the padding values
     borderPadding = cardW * borderPaddingPrc;
@@ -109,8 +115,6 @@ void ofApp::draw(){
     //credits
     ofSetColor(0);
     ofDrawBitmapString("Proxy Generator by Andy Wallace\nandy@andymakes.com  @andy_makes", previewX, 15);
-    
-    
     
     //show a preview of the first page
     float scale = previewW/getFboWidth();
@@ -161,14 +165,15 @@ void ofApp::draw(){
     
     //options
     ofSetColor(0);
-    ofDrawBitmapString("Border Padding: "+ofToString( (int)(borderPaddingPrc*100))+"%", borderPadSlider.pos.x, borderPadSlider.pos.y - 15);
+    ofDrawBitmapString("Border Padding: "+getPrcString(borderPaddingPrc)+"%", borderPadSlider.pos.x, borderPadSlider.pos.y - 15);
     borderPadSlider.draw();
     
-    ofDrawBitmapString("Card Spacing: "+ofToString( (int)(cardPaddingPrc*100))+"%", cardPadSlider.pos.x, cardPadSlider.pos.y - 15);
+    ofDrawBitmapString("Card Spacing: "+getPrcString(cardPaddingPrc)+"%", cardPadSlider.pos.x, cardPadSlider.pos.y - 15);
     cardPadSlider.draw();
 
     fillSpacingBox.draw();
     greyscaleCheckBox.draw();
+    restoreDefaultsBox.draw();
     
     //fake drag area
     ofNoFill();
@@ -314,6 +319,7 @@ void ofApp::mousePressed(int x, int y, int button){
     
     fillSpacingBox.mousePressed(x, y, button);
     greyscaleCheckBox.mousePressed(x, y, button);
+    restoreDefaultsBox.mousePressed(x, y, button);
     
     if (pageButtons[0].mousePressed(x,y,button)){
         changePage(-1);
@@ -510,6 +516,13 @@ void ofApp::makeFeedback(string text, bool isError){
 }
 
 //--------------------------------------------------------------
+string ofApp::getPrcString(float prc){
+    int newVal = prc * 1000;
+    float printVal = ((float)newVal / 100.0f) * 10;
+    return ofToString(printVal);
+}
+
+//--------------------------------------------------------------
 void ofApp::saveSettings(){
     
 #ifdef TARGET_OSX
@@ -548,7 +561,17 @@ void ofApp::loadSettings(){
         greyscaleCheckBox.setValue( xml.getValue("use_greyscale", 0) == 1);
     }else{
         cout<<"no settings to load, using defaults"<<endl;
+        restoreDefaults();
     }
+}
+
+//--------------------------------------------------------------
+void ofApp::restoreDefaults(){
+    borderPadSlider.setVal(0.09);
+    cardPadSlider.setVal(0);
+    fillSpacingBox.setValue(false);
+    greyscaleCheckBox.setValue(false);
+    saveSettings();
 }
 
 
