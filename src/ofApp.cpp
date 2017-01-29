@@ -567,7 +567,7 @@ void ofApp::loadSettings(){
 
 //--------------------------------------------------------------
 void ofApp::restoreDefaults(){
-    borderPadSlider.setVal(0.09);
+    borderPadSlider.setVal(0.12);
     cardPadSlider.setVal(0);
     fillSpacingBox.setValue(false);
     greyscaleCheckBox.setValue(false);
